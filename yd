@@ -1,0 +1,42 @@
+#! /bin/bash
+clear
+echo "Olá, este é o assistente do yt-dlp. Aqui você vai conseguir baixar um vídeo do YouTube rapidamente e com diferentes opções!!"
+echo ""
+if [ $# -eq 0 ]
+  then
+    echo 'Para iniciar o programa é necessário informar a URL do vídeo entre aspas ("")!!'
+    echo 'Exemplo:'
+    echo 'yd "https://youtu.be/Fl0YWLT6iFE?list=PL-kX5n0Z7ZpT_YcO_hm2owms_WMeMh7ZK"'
+    exit 1
+fi
+
+echo "Escolha o formato do download:"
+echo
+
+
+select opt in video áudio sair; do
+  case $opt in
+    video)
+      /bin/bash ~/bin/yd/yd-modules/download.sh $1 video
+      echo
+      echo "Tarefa finalizada!!"
+      break
+      ;;
+    áudio)
+      /bin/bash ~/bin/yd/yd-modules/download.sh $1 áudio
+      echo
+      echo "Tarefa finalizada!!"
+      break
+      ;;
+    sair)
+    clear
+      echo Usuário desistiu do download!!!
+      break
+      ;;
+    *) 
+      clear
+      echo "opção inválida. Escolha "1" para vídeo, "2" para áudio ou "3" para sair!!"
+      echo
+      ;;
+  esac
+done
