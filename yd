@@ -13,7 +13,7 @@ fi
 echo "Escolha o formato do download:"
 echo
 
-
+# selecionar se vai fazer o download do vídeo em formato de vídeo ou áudio
 select opt in video áudio sair; do
   case $opt in
     video)
