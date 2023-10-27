@@ -4,16 +4,16 @@ echo "Olá, este é o assistente do yt-dlp. Aqui você vai conseguir baixar um v
 echo ""
 if [ $# -eq 0 ]
   then
-    echo 'Para iniciar o programa é necessário informar a URL do vídeo entre aspas ("")!!'
+    echo 'Para iniciar o programa é necessário informar a URL do vídeo!!'
     echo 'Exemplo:'
-    echo 'yd "https://youtu.be/Fl0YWLT6iFE?list=PL-kX5n0Z7ZpT_YcO_hm2owms_WMeMh7ZK"'
+    echo '"yd https://youtu.be/ZYRcGU8A41g"'
     exit 1
 fi
 
 echo "Escolha o formato do download:"
 echo
 
-# selecionar se vai fazer o download do vídeo em formato de vídeo ou áudio
+
 select opt in video áudio sair; do
   case $opt in
     video)
