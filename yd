@@ -17,13 +17,13 @@ echo
 select opt in video áudio sair; do
   case $opt in
     video)
-      /bin/bash ~/bin/yd/yd-modules/download.sh $1 video
+      /bin/bash ~/bin/yd-helper/yd-modules/download.sh $1 video
       echo
       echo "Tarefa finalizada!!"
       break
       ;;
     áudio)
-      /bin/bash ~/bin/yd/yd-modules/download.sh $1 áudio
+      /bin/bash ~/bin/yd-helper/yd-modules/download.sh $1 áudio
       echo
       echo "Tarefa finalizada!!"
       break
